@@ -3,16 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Author;
 
 class AuthorsController extends Controller
 {
     public function index()
     {
-        $authors = [
-            ["id" => 1, "author" => "Abraham Silberschatz", "nationality" => "Israelis/American", "birth" => "1952", "fields" => "Database Systems, Operating Systems"],
-            ["id" => 2, "author" => "Andrew S. Tanenbaum", "nationality" => " Dutch/American", "birth" => "1944", "fields" => " Distributed computing, Operating Systems"],
+        $authors = Author::all();
+        return view('authors', compact('authors'));
+    }
 
-        ];
-        return view('authors', ['authors' => $authors]);
+    public function show($id)
+    {
+        $author = Author::findOrFail($id);
+        return view('authors.show', compact('author'));
     }
 }

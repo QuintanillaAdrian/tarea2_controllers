@@ -9,7 +9,7 @@
                 <p class="text-lg font-semibold">{{ $publisher['name'] }}</p>
                 <p class="text-gray-700"> Country: {{ $publisher['country'] }}</p>
                 <p class="text-gray-600"> Founded: {{ $publisher['founded'] }}</p>
-                <p class="text-gray-600"> Genere: {{ $publisher['genere'] }}</p>
+                <p class="text-gray-600"> Genere: {{ $publisher['genre'] }}</p>
             </li>
         @endforeach
     </ul>
