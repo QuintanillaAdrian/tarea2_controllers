@@ -5,7 +5,7 @@
     <ul class="divide-y divide-gray-300">
         @foreach ($authors as $id => $author)
             <li class="p-4 bg-gray-50 rounded-lg shadow mb-3">
-                <a class="text-lg font-semibold" href="{{ route('authors.show', $id) }}">{{ $author['author'] }}</a>
+                <a class="text-lg font-semibold" href="{{ route('authors.show', $id) }}">{{ $author['name'] }}</a>
                 <p class="text-gray-700"> Nationality: {{ $author['nationality'] }}</p>
                 <p class="text-gray-600"> Birth year: {{ $author['birth'] }}</p>
                 <p class="text-gray-600"> Fields: {{ $author['fields'] }}</p>
